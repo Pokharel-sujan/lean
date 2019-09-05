@@ -1,0 +1,385 @@
+.nav-bar{
+    background-color: #1683FB;
+    height: 68px;
+}
+
+.lean-title{
+    color: white;
+    text-decoration: none;
+    float: left;
+}
+body {
+    background-color: white;
+}
+
+.mr-auto {
+    padding-left: 20%;
+}
+
+.nav-link{
+    font-size: 20px;
+    font-weight: Regular;
+}
+
+.qr-code{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background-color: #D667CD;
+    border-radius: 9px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 3px rgba(0,0,0, 0.2);
+    cursor: pointer;
+}
+
+.qr-code img {
+    width: 60%;
+    height: 60%;  
+}
+
+/* .find-room{
+    margin: auto;
+    background-color: white;
+    width: 60%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+.room-input{
+    border-right-color:  rgb(108, 117, 125);
+    font-size: 20px;
+}
+
+.room-input:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: rgb(206, 212, 218);
+    border-right-color:  rgb(108, 117, 125);
+    outline: 0;
+    box-shadow: none;
+}
+
+.summary-point, .summary-status{
+    text-align: right;
+}
+
+.question-card{
+    /* border-bottom: 1px solid rgba(0,0,0, 0.2); */
+    padding: 10px;
+    margin: 5px 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0, 0.2);
+}
+
+.comment {
+    width: 100%;
+    height: 200px;
+    border: 0.5px solid rgba(0,0,0, 0.2);
+    margin-top: 10px;
+    padding: 5px;
+}
+
+input:focus, textarea:focus, select:focus, .btn:focus{
+    outline: none;
+}
+
+.find-room{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.question-checkbox{
+    margin-left: 20px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #96CFFC;
+}
+
+input, textarea{
+    color: #319EFC;
+}
+
+/*Toolbar*/
+.toolbar{
+    position: fixed;
+    width: 100%;
+    background: #00B9FF;
+    height: 56px;
+    top: 0;
+    left: 0;   
+}
+
+.toolbar-logo a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.toolbar-logo {
+    margin-left: 1rem;
+}
+
+.toolbar-navigation{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1 rem;
+}
+
+.toolbar-navigation-items ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.toolbar-navigation-items li{
+    padding: 0 0.5rem;
+}
+
+.toolbar-navigation-items a{
+    color: white;
+    text-decoration: none;
+}
+
+.toolbar-navigation-items a:hover,
+.toolbar-navigation-items a:active{
+    color: #D667CD;
+}
+
+.spacer{
+    flex: 1;
+}
+
+
+/*Toggle button*/
+.toggle-button{
+    display: flex;
+    height: 25px;
+    width: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+.toggle-button:focus{
+    outline: none;
+}
+
+.toggle-button-line{
+    width: 30px;
+    height: 2px;
+    background: white;
+}
+
+.side-drawer{
+    height: 100%;
+    background: #00B9FF;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 70%;
+    max-width: 400px;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+.side-drawer ul{
+    list-style: none;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.side-drawer li{
+    margin: 0.5rem 0;    
+    
+}
+
+.side-drawer a{   
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    letter-spacing: 0.1rem;
+}
+
+.side-drawer a:hover,
+.side-drawer a:active{
+    color: #D667CD;
+}
+
+.side-drawer.open{
+    transform: translateX(0);
+    box-shadow: 1px 0px 5px rgba(0,0,0,0.5);
+}
+
+.main-nav{
+    text-transform: uppercase;
+}
+
+.navigation-text{
+    color: white;  
+    line-height: 56px;    
+    letter-spacing: 0.2rem;
+    top: 0; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);   
+}
+
+
+/*Backdrop*/
+.backdrop{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 100;
+    top: 0;
+    left:0;
+}
+
+/*Login*/
+
+.login, .sign-up {
+    margin-top: -10px;
+}
+.topbar-text{
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 56px;    
+    letter-spacing: 0.2rem;
+}
+.background-img{
+    background: linear-gradient(
+                     rgba(161,134,233, .9), 
+                     rgba(20,20,20, .9));
+ 
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: -10px;
+}
+
+.bg-img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    position: relative;    
+}
+
+.icon{
+    width:  20vw;
+    height: 20vw;
+    position: absolute;   
+}
+
+
+#login-username, 
+#login-password{
+   border: none; 
+}
+
+.form-check-label{   
+    padding: 0.5rem 1.5rem;
+    font-size: 13px;
+    letter-spacing: 0.15rem;
+}
+
+.login-form{
+    margin-top: 2rem;
+}
+
+.signin-btn{
+    background-color: #D667CD;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    padding: 15px 40px;
+    display: block;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: none;
+    letter-spacing: 0.2rem;
+}
+
+/*Prevent scrolling*/
+body, html{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+/*SignUp*/
+#new-username, #new-password
+{
+    border: none;
+}
+
+
+/*Homepage*/
+.top-text{
+    padding-top: 10vh;
+    margin-bottom: 50px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: regular;
+    color: #00B9FF;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+/*Find room*/
+.find-room .form-check-label{
+    border: none;
+}
+
+.go-btn{
+    background: #D667CD;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 2px 3px rgba(0,0,0, 0.2);
+}
+
+/*Add questions*/
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question{
+    margin-top: 15px;
+}
+
+#new-question{
+    height: 25vw;
+    width: 90%;
+    word-break: normal;
+    object-fit: contain;
+    border-radius: 10px;
+}
+#correct-answer{
+    margin: 0 3vw 0 3vw;
+}
+
