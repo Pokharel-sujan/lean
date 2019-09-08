@@ -1,4 +1,4 @@
-/*import React, { Component } from 'react';
+import React, { Component } from 'react';
 import '../css/App.css';
 import Navigation from './Navbar';
 import QRCode from './QRCode';
@@ -30,7 +30,7 @@ const orStyle = {
   
 };
 
-class Home extends Component {
+class Frontpage extends Component {
   render() {
     return (
       <div className="Home">
@@ -48,29 +48,4 @@ class Home extends Component {
   }
 }
 
-export default Home;*/
-
-
-//sujan downside
-import React, {Component} from 'react';
-import firebase from './firebase';
-import Frontpage from'./Frontpage'
-
-class Home extends Component {
-
-    logout = () => {
-        firebase.auth().signOut();
-    }
-
-    render(){
-        return(
-            <div>
-                <h1>You are home!</h1>
-                <Frontpage/>
-                <button onClick={this.logout}>Logout</button>
-            </div>
-        )
-    }
-}
-
-export default Home; 
+export default Frontpage;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import firebase from './components/firebase';
 import { BrowserRouter, Route, NavLink, Switch } from 'react-router-dom';
 import './css/App.css';
 import Navigation from './components/Navbar';
@@ -18,13 +19,48 @@ import ToggleAnimation from './components/ToggleAnimation';
 import Chart from './components/Chart';
 
 
+
 class App extends Component {
 
+// sujan starts
+  constructor(){
+    super();
+    this.state = {
+      user: null
+    }
+  }
 
-  render() {
+  componentDidMount(){
+    this.authListener();
+  }
+
+  authListener(){
+    firebase.auth().onAuthStateChanged((user) => {
+      if(user){
+        this.setState({user});
+      }else{
+        this.setState({user:null});
+      }
+    });
+  }
+  render(){
+    return (
+        <div>
+          {this.state.user ? (<Home />) : (<Login />)}
+        </div>
+    );
+  }
+}
+//ends here
+
+
+/*tungs from here
+
+render() {
 
     return (
       <div>
+      
 
         <BrowserRouter>
           
@@ -37,9 +73,9 @@ class App extends Component {
               <Route path="/login" component={Login} />
               <Route path="/signup" component={SignUp} />
               <Route path="/chart" component={Chart} />
-              {/* <Route path="/addrooms" component={AddRooms} /> */}
-              <Route path="/room" component={Room} /> {/* Temporarily deleting ":room" - the recursive module*/}
-              <Route path="/questions/:room" component={QuestionsForm} />
+/*              {/* <Route path="/addrooms" component={AddRooms} /> */  
+/*              <Route path="/room" component={Room} /> {/* Temporarily deleting ":room" - the recursive module*}
+/*              <Route path="/questions/:room" component={QuestionsForm} />
             </main>
 
 
@@ -50,4 +86,6 @@ class App extends Component {
   }
 }
 
+*/
+ 
 export default App;

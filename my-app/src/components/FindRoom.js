@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { BrowserRouter, withRouter } from 'react-router-dom';
 import firebase from './firebase';
 
 var existRooms = [];
@@ -68,4 +68,6 @@ class FindRoom extends Component {
   }
 }
 
-export default withRouter(FindRoom);
+export default (withRouter(FindRoom));
+
+//withRouter

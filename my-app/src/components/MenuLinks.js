@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { BrowserRouter, Route, NavLink, Switch } from 'react-router-dom';
 import Navigation from './Navbar';
 import Home from './Home';
@@ -21,6 +22,8 @@ import ToggleAnimation from './ToggleAnimation';
 class MenuLinks extends Component {
   render() {
     return (
+      <BrowserRouter>
+      
 
           <ul className="main-nav">
             <li><a href="/">Home</a></li>
@@ -35,6 +38,8 @@ class MenuLinks extends Component {
 
 
           </ul>
+          </BrowserRouter>
+          
    
     );
   }
